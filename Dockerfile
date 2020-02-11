@@ -1,5 +1,5 @@
 # Build stage - could use maven or our image
-FROM quay.io/eclipse/che-java8-maven:7.8.0 as builder
+FROM adoptopenjdk/openjdk8-openj9 as builder
 
 COPY . .
 RUN mvn clean install
