@@ -1,5 +1,5 @@
 # Build stage - could use maven or our image
-FROM maven:3.3-jdk-8 as builder
+FROM quay.io/eclipse/che-java8-maven:7.8.0 as builder
 
 COPY . .
 RUN mvn clean install
