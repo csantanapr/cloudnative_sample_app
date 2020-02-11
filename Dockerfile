@@ -1,9 +1,7 @@
 # Build stage - could use maven or our image
 FROM adoptopenjdk/openjdk8-openj9 as builder
 
-RUN mkdir /app
-WORKDIR /app
-COPY . /app/
+COPY . /
 
 RUN ./mvnw clean install
 
