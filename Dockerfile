@@ -1,9 +1,8 @@
 # Build stage - could use maven or our image
-FROM registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift as builder
+FROM maven:3.3-jdk-8 as builder
 
-COPY . /
-
-RUN ./mvnw clean install
+COPY . .
+RUN mvn clean install
 
 FROM openliberty/open-liberty:springBoot2-ubi-min
 
