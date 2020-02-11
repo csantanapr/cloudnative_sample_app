@@ -1,5 +1,5 @@
 # Build stage - could use maven or our image
-FROM adoptopenjdk/openjdk8-openj9 as builder
+FROM registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift as builder
 
 COPY . /
 
